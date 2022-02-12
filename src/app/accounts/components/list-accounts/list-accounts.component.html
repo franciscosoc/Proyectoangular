@@ -1,0 +1,68 @@
+<div class="container">
+
+  <div class="card border-primary mb-3">
+    <div class="card-header">Clientes</div>
+    <div class="card-body text-primary">
+      <h5 class="card-title">Listado de Cuentas</h5>
+
+        <div class="my-2" text-left>
+
+          <button class="btn btn-rounded btn-primary" type="button" [routerLink]="['/create/cuenta']"> Crear Cuenta </button>
+
+        </div>
+
+
+
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+
+
+                <th>Numero de cuenta</th>
+                <th>fecha Apertura</th>
+                <th>Tipo Cuenta</th>
+                <th>Estado</th>
+                <th>saldo</th>
+
+              <!--   <th>Email</th>
+                <th>fechaNacimiento</th> -->
+
+                <th> editar </th>
+                <th> cuentas </th>
+
+
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr *ngFor="let account of accounts">
+
+
+              <td>{{account.numeroCuenta}}</td>
+              <td>{{account.fechaApertura}}</td>
+              <td>{{account.tipoCuenta}}</td>
+              <td>{{account.estado}}</td>
+              <td>{{account.saldo}}</td>
+
+
+    
+            <td>  <button type="button" name="editar" [routerLink]="['customers/form', customer.id]" class="btn btn-secondary">  Editar </button>     </td>
+
+             <td>   <button type="button" name="ver" [routerLink]="['customers/form', customer.id]" class="btn btn-primary">  Ver </button>  </td>
+
+
+
+            </tr>
+          </tbody>
+          </table>
+
+          </div>
+
+        </div>
+
+
+
+  </div>
+
+
